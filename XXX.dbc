@@ -1,0 +1,80 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: 
+BO_ 514 DisplayState: 8 Vector__XXX
+   SG_ MotorReady : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Kickstand_State : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Motor_State_1 : 5|2@0+ (1,0) [0|4] "" Vector__XXX
+   SG_ Motor_State_Internal : 20|2@0+ (1,0) [0|4] "" Vector__XXX
+   SG_ Speed_Mode : 25|2@0+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 515 Motor_Controller: 0 Vector__XXX
+   SG_ RPM : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Unk : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Unk : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Unk : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 770 BMS: 8 Vector__XXX
+   SG_ Amps : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Voltage : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Unknown : 15|8@0- (1,0) [0|1] "" Vector__XXX
+   SG_ Unknown55 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 771 BMS155: 8 Vector__XXX
+   SG_ Speed : 7|4@0+ (1,0) [0|60] "" Vector__XXX
+
+BO_ 257 BMS2: 0 Vector__XXX
+   SG_ ChargeState : 31|8@0+ (1,0) [0|99] "" Vector__XXX
+   SG_ ChargeState69 : 23|8@0+ (1,0) [0|99] "" Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_ "GenMsgForegroundColor" BO_ 514 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 514 "#ffffff";
+BA_ "GenMsgForegroundColor" BO_ 515 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 515 "#f6f6f6";
+BA_ "GenMsgForegroundColor" BO_ 770 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 257 "#ffffff";
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 1;
+VAL_ 514 MotorReady 0 "Ready" 1 "Not_Ready";
+VAL_ 514 Kickstand_State 0 "Up" 1 "Down";
+VAL_ 514 Motor_State_1 1 "Eco" 2 "Sport";
+VAL_ 514 Motor_State_Internal 1 "Sport" 2 "Eco" 3 "Brown-Eco";
+VAL_ 514 Speed_Mode 0 "Unknown" 0 "";
